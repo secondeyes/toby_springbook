@@ -9,7 +9,7 @@ public class Main {
         UserDao userDao = new UserDao();
 
         User user = new User();
-        user.setId("1233");
+        user.setId("123333");
         user.setName("jjun");
         user.setPassword("sss");
 
