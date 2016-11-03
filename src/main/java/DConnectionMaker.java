@@ -7,11 +7,11 @@ import java.sql.SQLException;
 /**
  * Created by yongjunjung on 2016. 11. 3..
  */
-public class NUserDao extends UserDao {
+public class DConnectionMaker implements ConnectionMaker {
 
-    public Connection getConnection() throws ClassNotFoundException, SQLException {
+    @Override
+    public Connection makeConnection() throws ClassNotFoundException, SQLException {
         Class.forName("org.h2.Driver");
         return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/springbook", "sa", "");
     }
-
 }

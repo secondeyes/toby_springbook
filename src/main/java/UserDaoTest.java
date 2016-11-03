@@ -1,11 +1,11 @@
-import main.java.ConnectionMaker;
-import main.java.DConnectionMaker;
-import main.java.User;
-import main.java.UserDao;
+package main.java;
 
 import java.sql.SQLException;
 
-public class Main {
+/**
+ * Created by yongjunjung on 2016. 11. 3..
+ */
+public class UserDaoTest {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
@@ -14,7 +14,7 @@ public class Main {
         UserDao userDao = new UserDao(connectionMaker);
 
         User user = new User();
-        user.setId("123wws333");
+        user.setId("1231wws333");
         user.setName("jjun");
         user.setPassword("sss");
 
@@ -27,7 +27,6 @@ public class Main {
         System.out.println(user2.getPassword());
 
         System.out.println(user2.getId() + "조회 성공");
-
 
     }
 }
