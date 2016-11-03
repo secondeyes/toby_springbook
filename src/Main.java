@@ -1,5 +1,5 @@
-import main.java.NUserDao;
 import main.java.User;
+import main.java.UserDao;
 
 import java.sql.SQLException;
 
@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        NUserDao userDao = new NUserDao();
+        UserDao userDao = new UserDao();
 
         User user = new User();
-        user.setId("123ww333");
+        user.setId("123wws333");
         user.setName("jjun");
         user.setPassword("sss");
 
@@ -23,7 +23,6 @@ public class Main {
         System.out.println(user2.getPassword());
 
         System.out.println(user2.getId() + "조회 성공");
-
 
 
     }
