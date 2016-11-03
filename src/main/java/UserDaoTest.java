@@ -24,6 +24,7 @@ public class UserDaoTest {
         System.out.println(user2.getName());
         System.out.println(user2.getPassword());
 
+
         System.out.println(user2.getId() + "조회 성공");
 
     }
