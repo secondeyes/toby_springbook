@@ -5,7 +5,7 @@ import java.sql.*;
 /**
  * Created by yongjunjung on 2016. 11. 2..
  */
-public class UserDao {
+public abstract class UserDao {
 
     public void add(User user) throws ClassNotFoundException, SQLException {
 
@@ -22,10 +22,7 @@ public class UserDao {
         c.close();
     }
 
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("org.h2.Driver");
-        return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/springbook", "sa", "");
-    }
+    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 
     public User get(String id) throws ClassNotFoundException, SQLException {
         Connection c = getConnection();
