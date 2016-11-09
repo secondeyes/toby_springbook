@@ -24,6 +24,8 @@ public class UserDao {
         ps.setString(2, user.getName());
         ps.setString(3, user.getPassword());
 
+        //pull Request 테스트 중입니다.
+
         ps.executeUpdate();
 
         ps.close();
