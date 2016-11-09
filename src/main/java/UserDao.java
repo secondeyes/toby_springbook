@@ -1,6 +1,9 @@
 package main.java;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * Created by yongjunjung on 2016. 11. 2..
@@ -23,6 +26,10 @@ public class UserDao {
         ps.setString(1, user.getId());
         ps.setString(2, user.getName());
         ps.setString(3, user.getPassword());
+
+        //pull Request 테스트 중입니다.
+        //pull Request 테스트 중입니다.2222
+
 
         ps.executeUpdate();
 
